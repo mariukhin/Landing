@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+         url('../../fonts/montserrat-v12-latin-regular.woff2') format('woff2'),
+         url('../../fonts/montserrat-v12-latin-regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+         url('../../fonts/montserrat-v12-latin-700.woff2') format('woff2'),
+         url('../../fonts/montserrat-v12-latin-700.woff') format('woff');
+}
+@font-face {
+    font-family: 'Allan';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/allan-v9-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Allan Regular'), local('Allan-Regular'),
+         url('../fonts/allan-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/allan-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/allan-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/allan-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/allan-v9-latin-regular.svg#Allan') format('svg'); /* Legacy iOS */
+}
+$mont: 'Montserrat';
+$allan: 'Allan';
+
+$colors:(
+    text-style: #d9d9d9,
+    header-back: #2a2a2a,
+    headernav-back: #262626,
+    btnandhover: #e45f59
+);
+
+@mixin buttons($pad: 0, $mar: 'bottom', $marnum: 0, $butwidth: '', 
+$butheight: 0, $backcolor: transparent){
+
+    padding: $pad;
+    width: $butwidth;
+    height: $butheight;
+    cursor: pointer;
+    background-color: $backcolor;
+
+    @if $mar == 'bottom'{
+        margin-bottom: $marnum;
+    }@else if $mar == 'left'{
+        margin-left: $marnum;
+    }@else if $mar == 'right'{
+        margin-right: $marnum;
+    }@else if $mar == 'top'{
+        margin-top: $marnum;
+    }@else if $mar == 'null'{
+        margin: 0;
+        $marnum: 0;
+    }        
+}
+@mixin whmb($width: '', $height: '', $mar-bottom: '', $pos: '', $dis: ''){
+    width: $width;
+    height: $height;
+    margin-bottom: $mar-bottom;
+    position: $pos;
+    display: $dis;
+}
+////////////-----header-nav.scss------//////////////
+@mixin flex($value: 'all'){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    @if $value == 'all'{
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
+    }@else if $value == 'hor'{
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    }@else if $value == 'ver'{
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
+    }@else if $value == 'align'{
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    }           
+}
+%icon{
+    width: 18px;
+    fill: map-get($map: $colors, $key: text-white);
+    fill-rule: evenodd;
+}
+
+////////////-----text_style.scss------//////////////
+
+@mixin font_style($family: '', $fsize: '', $fweight: 400, $lheight: '',$ftrans: uppercase, $fcolor: ''){
+    font-family: $family;
+    font-size: $fsize ;
+    font-weight: $fweight;
+    line-height: $lheight;
+    text-transform: $ftrans;
+    color: map-get($map: $colors, $key: $fcolor);
+}
+
+
+////////////-----services.scss------//////////////
+
+%collection{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-height: 15.1rem;
+    @include flex();
+}
+%icon-service{
+    position: absolute;
+    left: 1.875rem;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+}
+
+////////////----------team.scss-----------/////////////
+
+@mixin back-transform($team){
+    -webkit-transform: translate(-0.625rem, -0.625rem);
+        -ms-transform: translate(-0.625rem, -0.625rem);
+            transform: translate(-0.625rem, -0.625rem);
+    background: $line-grad, url('../img/#{$team}.jpg');
+}
