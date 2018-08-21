@@ -34,7 +34,9 @@ $colors:(
     header-bot-back: #2a2a2a,
     header-top-back: #262626,
     btnandhover: #e45f59,
-    btncolor: #ff6760
+    btncolor: #ff6760,
+    main-types: #f8f8f8,
+    main-types-text: #616161
 );
 @mixin buttons($pad: 0, $mar: 'bottom', $marnum: 0, $butwidth: '', 
 $butheight: 0, $backcolor: transparent){

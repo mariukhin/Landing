@@ -423,6 +423,30 @@ template {
   /* Legacy iOS */
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../../fonts/montserrat-v12-latin-regular.woff2") format("woff2"), url("../../fonts/montserrat-v12-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../../fonts/montserrat-v12-latin-700.woff2") format("woff2"), url("../../fonts/montserrat-v12-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Allan';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/allan-v9-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Allan Regular"), local("Allan-Regular"), url("../fonts/allan-v9-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/allan-v9-latin-regular.woff2") format("woff2"), url("../fonts/allan-v9-latin-regular.woff") format("woff"), url("../fonts/allan-v9-latin-regular.ttf") format("truetype"), url("../fonts/allan-v9-latin-regular.svg#Allan") format("svg");
+  /* Legacy iOS */
+}
+
 * {
   margin: 0;
 }
@@ -619,4 +643,54 @@ template {
   /* IE9 Compat Modes */
   src: local("Allan Regular"), local("Allan-Regular"), url("../fonts/allan-v9-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/allan-v9-latin-regular.woff2") format("woff2"), url("../fonts/allan-v9-latin-regular.woff") format("woff"), url("../fonts/allan-v9-latin-regular.ttf") format("truetype"), url("../fonts/allan-v9-latin-regular.svg#Allan") format("svg");
   /* Legacy iOS */
+}
+
+.main-background_top {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.main-types {
+  width: 69.375rem;
+  margin: 0 auto;
+  padding: 5.2rem 0;
+}
+
+.main-types_list {
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.types-list_item {
+  flex-basis: 14.8125rem;
+}
+
+.types-list_item_photo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1.875rem;
+}
+
+.types-list_item_title {
+  font-family: "Montserrat";
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 1.2em;
+  text-transform: none;
+  margin: 0;
+  color: #616161;
+  margin-bottom: 0.5rem;
+}
+
+.types-list_item_subtitle {
+  font-family: "Montserrat";
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1.8em;
+  text-transform: none;
+  margin: 0;
+  color: #616161;
 }

@@ -1,0 +1,33 @@
+@import 'variables';
+
+.main-background_top{
+    width: 100%;
+    background-color: map-get($map: $colors, $key: main-types);
+}
+.main-types{
+    width: 69.375rem;
+    margin: 0 auto;
+    padding: 5.2rem 0; 
+    &_list{
+        padding: 0;
+        text-align: center;
+        list-style: none;
+        @include flex(hor);
+    }
+}
+.types-list_item{
+    -ms-flex-preferred-size: 14.8125rem;
+            flex-basis: 14.8125rem;
+    &_photo{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 1.875rem;
+    }
+    &_title{
+        @include font_style($mont, 1.1em, 400, 1.2em, none, main-types-text);
+        margin-bottom: 0.5rem;
+    }
+    &_subtitle{
+        @include font_style($mont, 0.8em, 400, 1.8em, none, main-types-text);
+    }
+}

@@ -3,6 +3,15 @@
 */
 @import 'normalize';
 @import 'text-style';
+@import 'variables';
+
+
+/////=========HEADER======================/////////
+
 @import 'header/header-top.scss';
 @import 'header/header-bottom.scss';
-@import 'variables';
+
+
+////=========MAIN==============///////////
+
+@import 'main/main-types.scss';
