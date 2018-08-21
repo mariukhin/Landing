@@ -2,7 +2,6 @@
    Import partials below
 */
 @import 'normalize';
-@import 'text-style';
 @import 'variables';
 
 
@@ -15,3 +14,8 @@
 ////=========MAIN==============///////////
 
 @import 'main/main-types.scss';
+@import 'main/main-works.scss';
+
+////=======FOOTER==========/////////
+
+@import 'footer/footer-top.scss';

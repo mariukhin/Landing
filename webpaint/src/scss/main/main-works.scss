@@ -1,0 +1,47 @@
+@import 'variables';
+.main-works{
+    text-align: center;
+    width: 69.375rem;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+    &_title{
+        @include font_style($mont, 1.8em, 400, 2em, none, main-types-text);
+        margin-top: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+    &_subtitle{
+        @include font_style($mont, 1.1em, 400, 1.2em, none, main-types-text);
+        margin-bottom: 2.5rem;
+    }
+    &_btn-container{
+        width: 22.5rem;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        @include flex(hor);
+    }
+    &_btn{
+        @include font_style($mont, 0.85em, 400, 0.85em, uppercase, btnwhite);
+        padding: 0.75rem;
+        cursor: pointer;
+        background-color: map-get($map: $colors, $key: btncolor);
+        border: 0;
+        border-radius: 0.3rem;
+        &:hover{
+            background-color: map-get($map: $colors, $key: btnmainhover);
+        }
+    }
+    &_list{
+        padding: 0;
+        list-style: none;
+        min-height: 42.5rem;
+        @include flex(all);
+        &_item{
+            -ms-flex-preferred-size: 16.875rem;
+                flex-basis: 16.875rem;
+            &_photo{
+                display: block;
+                height: auto;
+            }
+        }
+    }
+}

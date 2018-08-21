@@ -1,0 +1,31 @@
+@import 'variables';
+
+.footer{
+    width: 100%;
+    text-align: center;
+}
+.footer-background_top{
+    width: 100%;
+    background-color: map-get($map: $colors, $key: footertopback);
+}
+.footer-top{
+    width: 38.625rem;
+    margin: 0 auto;
+    padding-top: 3rem;
+    &_title{
+        @include font_style($mont, 1.5em, 400, 1.5em, none, footertext);
+        margin-bottom: 0.5rem;
+    }
+    &_subtitle{
+        @include font_style($mont, 1em, 400, 1em, none, footsubtitle);
+        margin-bottom: 0.5rem;
+    }
+    &_adress{
+        @include font_style($mont, 0.75em, 400, 0.9em, none, footsubtitle);
+        &::before{
+            content: url('../../img/footer-adress.png');
+            width: 0.5625rem;
+            height: 0.8125rem;
+        }
+    }
+}

@@ -36,7 +36,12 @@ $colors:(
     btnandhover: #e45f59,
     btncolor: #ff6760,
     main-types: #f8f8f8,
-    main-types-text: #616161
+    main-types-text: #616161,
+    btnwhite: #ffffff,
+    btnmainhover: #595959,
+    footertopback: #313131,
+    footertext: #e0e0e0,
+    footsubtitle: #bebebe
 );
 @mixin buttons($pad: 0, $mar: 'bottom', $marnum: 0, $butwidth: '', 
 $butheight: 0, $backcolor: transparent){
@@ -60,14 +65,6 @@ $butheight: 0, $backcolor: transparent){
         $marnum: 0;
     }        
 }
-@mixin whmb($width: '', $height: '', $mar-bottom: '', $pos: '', $dis: ''){
-    width: $width;
-    height: $height;
-    margin-bottom: $mar-bottom;
-    position: $pos;
-    display: $dis;
-}
-////////////-----header-nav.scss------//////////////
 @mixin flex($value: 'all'){
     display: -webkit-box;
     display: -ms-flexbox;
@@ -93,13 +90,6 @@ $butheight: 0, $backcolor: transparent){
             align-items: center;
     }           
 }
-%icon{
-    width: 18px;
-    fill: map-get($map: $colors, $key: text-white);
-    fill-rule: evenodd;
-}
-
-////////////-----text_style.scss------//////////////
 
 @mixin font_style($family: '', $fsize: '', $fweight: 400, $lheight: '',$ftrans: uppercase, $fcolor: ''){
     font-family: $family;
@@ -111,29 +101,3 @@ $butheight: 0, $backcolor: transparent){
     color: map-get($map: $colors, $key: $fcolor);
 }
 
-
-////////////-----services.scss------//////////////
-
-%collection{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    min-height: 15.1rem;
-    @include flex();
-}
-%icon-service{
-    position: absolute;
-    left: 1.875rem;
-    top: 0;
-    width: 2rem;
-    height: 2rem;
-}
-
-////////////----------team.scss-----------/////////////
-
-@mixin back-transform($team){
-    -webkit-transform: translate(-0.625rem, -0.625rem);
-        -ms-transform: translate(-0.625rem, -0.625rem);
-            transform: translate(-0.625rem, -0.625rem);
-    background: $line-grad, url('../img/#{$team}.jpg');
-}
