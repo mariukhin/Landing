@@ -31,11 +31,11 @@ $allan: 'Allan';
 
 $colors:(
     text-style: #d9d9d9,
-    header-back: #2a2a2a,
-    headernav-back: #262626,
-    btnandhover: #e45f59
+    header-bot-back: #2a2a2a,
+    header-top-back: #262626,
+    btnandhover: #e45f59,
+    btncolor: #ff6760
 );
-
 @mixin buttons($pad: 0, $mar: 'bottom', $marnum: 0, $butwidth: '', 
 $butheight: 0, $backcolor: transparent){
 
@@ -105,6 +105,7 @@ $butheight: 0, $backcolor: transparent){
     font-weight: $fweight;
     line-height: $lheight;
     text-transform: $ftrans;
+    margin: 0;
     color: map-get($map: $colors, $key: $fcolor);
 }
 

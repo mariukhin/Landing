@@ -1,0 +1,65 @@
+@import 'variables.scss';
+*{
+    margin: 0;
+}
+.header{
+    background-color: map-get($map: $colors, $key: header-top-back);
+    width: 100%;
+
+
+}
+.header-top{
+    width: 65rem;
+    margin: 0 auto;
+    @include flex(hor);
+    padding-top: 1.875rem;
+    min-height: 1.5rem;
+    padding-bottom: 1.88rem;
+
+    &_logo{
+        -ms-flex-preferred-size: 7rem;
+            flex-basis: 7rem;
+        text-decoration: none;
+        &_text{
+            display: inline-block;
+            vertical-align: top;
+            @include font_style($allan, 1.75rem, 400, 2rem, none, text-style);
+        }
+        &::before{
+            content: url('../img/Logo-icon.png');
+            display: inline-block;
+            width: 2.4rem;
+            height: 2.5rem;
+        }
+    }
+    &_nav{
+        -ms-flex-preferred-size: 31.25rem;
+            flex-basis: 31.25rem;
+    }
+}
+.nav-menu{
+    padding: 0;
+    @include flex(hor);
+    width: 100%;
+    list-style: none;
+    line-height: 2.5rem;
+    &_item{
+        cursor: pointer;
+        -ms-flex-preferred-size: 3rem;
+            flex-basis: 3rem;
+        &_link{
+            text-decoration: none;
+            @include font_style($mont, 0.875rem, 400, 0.875rem, uppercase, text-style);
+
+            -webkit-transition: color 200ms linear;
+            -o-transition: color 200ms linear;
+            transition: color 200ms linear;
+            -webkit-transition: border 200ms linear;
+            -o-transition: border 200ms linear;
+            transition: border 200ms linear;
+        }
+        &:hover &_link{
+            color: map-get($map: $colors, $key: btnandhover);
+        }    
+    }
+}

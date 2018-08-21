@@ -3,5 +3,6 @@
 */
 @import 'normalize';
 @import 'text-style';
-@import 'header-nav.scss';
+@import 'header/header-top.scss';
+@import 'header/header-bottom.scss';
 @import 'variables';

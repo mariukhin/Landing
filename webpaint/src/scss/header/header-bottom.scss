@@ -1,0 +1,33 @@
+@import 'variables.scss';
+.header-bottom{
+    width: 100%;
+    background-color: map-get($map: $colors, $key: header-bot-back);
+    padding-top: 3.375rem;
+    &_text{
+        text-align: center;
+        width: 64rem;
+        margin: 0 auto;
+    }
+    &_title{
+        @include font_style($mont, 3.75rem, 400, 4rem, none, text-style);
+        margin-bottom: 1.75rem;
+        &_bold{
+            @include font_style($mont, 3.75rem, 700, 4rem, none, text-style);
+        }
+    }
+    &_subtitle{
+        @include font_style($mont, 1.75rem, 400, 2rem, none, text-style);
+        margin-bottom: 3.25rem;
+        &_cursive{
+            @include font_style($mont, 1.75rem, 400, 2rem, none, text-style);
+        }
+    }
+    &_btn-see{
+        @include font_style($mont, 0.75rem, 400, 1rem, uppercase, text-style);
+        @include buttons(1rem,'bottom', 2rem , 12.5625rem, 
+        3.125rem, map-get($map: $colors, $key: btncolor));
+        border: 0;
+        border-radius: 0.3rem;
+    }
+}
+
