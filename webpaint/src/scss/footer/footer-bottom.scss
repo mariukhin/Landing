@@ -1,0 +1,12 @@
+@import 'variables';
+
+.footer-bottom{
+    width: 100%;
+    background-color: map-get($map: $colors, $key: footer-bot-back);
+    &_title{
+        padding: 2rem 0;
+        @include font_style($mont, 0.75em, 400, 0.9em, none, footsubtitle);
+        display: inline-block;
+        margin: 0 auto;
+    }
+}

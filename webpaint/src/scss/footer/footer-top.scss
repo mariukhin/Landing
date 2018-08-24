@@ -12,20 +12,66 @@
     width: 38.625rem;
     margin: 0 auto;
     padding-top: 3rem;
+    padding-bottom: 3rem;
     &_title{
         @include font_style($mont, 1.5em, 400, 1.5em, none, footertext);
         margin-bottom: 0.5rem;
     }
     &_subtitle{
         @include font_style($mont, 1em, 400, 1em, none, footsubtitle);
-        margin-bottom: 0.5rem;
+        margin-bottom: 1.2rem;
+    }
+    &_contacts{
+        @include flex(hor);
+        width: 30.3125rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
     }
     &_adress{
+        -ms-flex-preferred-size: 20.1875rem;
+            flex-basis: 20.1875rem;
         @include font_style($mont, 0.75em, 400, 0.9em, none, footsubtitle);
         &::before{
             content: url('../../img/footer-adress.png');
+            padding-right: 0.3rem;
             width: 0.5625rem;
             height: 0.8125rem;
         }
+    }
+    &_telephone{
+        -ms-flex-preferred-size: 8.4375rem;
+            flex-basis: 8.4375rem;
+        @include font_style($mont, 0.75em, 400, 0.9em, none, footsubtitle);
+        &::before{
+            content: url('../../img/footer-tel.png');
+            padding-right: 0.5rem;
+            width: 0.5625rem;
+            height: 0.8125rem;
+        }
+    }
+    &_social-container{
+        @include flex(hor);
+        width: 12.5625rem;
+        margin: 0 auto;
+    }
+    &_social_btn_wireless{
+        @extend %social-button;
+        @include social-btn(wirebtn, url('../../img/social-btn1.png'), 0.95rem);
+    }
+    &_social_btn_facebook{
+        @extend %social-button;
+        @include social-btn(fbbtn, url('../../img/social-btn2.png'), 0.375rem);
+    }
+    &_social_btn_tumblr{
+        @extend %social-button;
+        @include social-btn(tmblrbtn, url('../../img/social-btn3.png'), 0.5625rem);
+    }
+    &_social_btn_round{
+        @extend %social-button;
+        @include social-btn(roundbtn, url('../../img/social-btn4.png'), 0.75rem);
+    }
+    &_social_btn_pinterest{
+        @extend %social-button;
+        @include social-btn(pintbtn, url('../../img/social-btn5.png'), 0.625rem);
     }
 }

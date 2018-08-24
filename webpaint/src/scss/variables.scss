@@ -41,7 +41,13 @@ $colors:(
     btnmainhover: #595959,
     footertopback: #313131,
     footertext: #e0e0e0,
-    footsubtitle: #bebebe
+    footsubtitle: #bebebe,
+    wirebtn: #f3b25b,
+    fbbtn: #5883c0,
+    tmblrbtn: #63bee0,
+    roundbtn: #e9a0c4,
+    pintbtn: #d35051,
+    footer-bot-back: #2c2c2c
 );
 @mixin buttons($pad: 0, $mar: 'bottom', $marnum: 0, $butwidth: '', 
 $butheight: 0, $backcolor: transparent){
@@ -100,4 +106,27 @@ $butheight: 0, $backcolor: transparent){
     margin: 0;
     color: map-get($map: $colors, $key: $fcolor);
 }
+%social-button{
+    -ms-flex-preferred-size: 2.1875rem;
+            flex-basis: 2.1875rem;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 1rem;
+}
 
+@mixin social-btn($bgcolor: '', $pseudo: '', $width: ''){
+    background-color: map-get($map: $colors, $key: $bgcolor);
+    &::before{
+        content: $pseudo;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: $width;
+        height: 1rem;
+        color: map-get($map: $colors, $key: btnwhite);
+    }
+
+}

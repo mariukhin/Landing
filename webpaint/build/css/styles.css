@@ -399,6 +399,19 @@ template {
   /* Legacy iOS */
 }
 
+.footer-top_social_btn_wireless,
+.footer-top_social_btn_facebook,
+.footer-top_social_btn_tumblr,
+.footer-top_social_btn_round,
+.footer-top_social_btn_pinterest {
+  flex-basis: 2.1875rem;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 1rem;
+}
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -421,6 +434,19 @@ template {
   /* IE9 Compat Modes */
   src: local("Allan Regular"), local("Allan-Regular"), url("../fonts/allan-v9-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/allan-v9-latin-regular.woff2") format("woff2"), url("../fonts/allan-v9-latin-regular.woff") format("woff"), url("../fonts/allan-v9-latin-regular.ttf") format("truetype"), url("../fonts/allan-v9-latin-regular.svg#Allan") format("svg");
   /* Legacy iOS */
+}
+
+.footer-top_social_btn_wireless,
+.footer-top_social_btn_facebook,
+.footer-top_social_btn_tumblr,
+.footer-top_social_btn_round,
+.footer-top_social_btn_pinterest {
+  flex-basis: 2.1875rem;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 1rem;
 }
 
 * {
@@ -525,6 +551,19 @@ template {
   /* Legacy iOS */
 }
 
+.footer-top_social_btn_wireless,
+.footer-top_social_btn_facebook,
+.footer-top_social_btn_tumblr,
+.footer-top_social_btn_round,
+.footer-top_social_btn_pinterest {
+  flex-basis: 2.1875rem;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 1rem;
+}
+
 .header-bottom {
   width: 100%;
   background-color: #2a2a2a;
@@ -621,6 +660,19 @@ template {
   /* Legacy iOS */
 }
 
+.footer-top_social_btn_wireless,
+.footer-top_social_btn_facebook,
+.footer-top_social_btn_tumblr,
+.footer-top_social_btn_round,
+.footer-top_social_btn_pinterest {
+  flex-basis: 2.1875rem;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 1rem;
+}
+
 .main-background_top {
   width: 100%;
   background-color: #f8f8f8;
@@ -693,6 +745,19 @@ template {
   /* IE9 Compat Modes */
   src: local("Allan Regular"), local("Allan-Regular"), url("../fonts/allan-v9-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/allan-v9-latin-regular.woff2") format("woff2"), url("../fonts/allan-v9-latin-regular.woff") format("woff"), url("../fonts/allan-v9-latin-regular.ttf") format("truetype"), url("../fonts/allan-v9-latin-regular.svg#Allan") format("svg");
   /* Legacy iOS */
+}
+
+.footer-top_social_btn_wireless,
+.footer-top_social_btn_facebook,
+.footer-top_social_btn_tumblr,
+.footer-top_social_btn_round,
+.footer-top_social_btn_pinterest {
+  flex-basis: 2.1875rem;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 1rem;
 }
 
 .main-works {
@@ -795,6 +860,19 @@ template {
   /* Legacy iOS */
 }
 
+.footer-top_social_btn_wireless,
+.footer-top_social_btn_facebook,
+.footer-top_social_btn_tumblr,
+.footer-top_social_btn_round,
+.footer-top_social_btn_pinterest {
+  flex-basis: 2.1875rem;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 1rem;
+}
+
 .footer {
   width: 100%;
   text-align: center;
@@ -809,6 +887,7 @@ template {
   width: 38.625rem;
   margin: 0 auto;
   padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .footer-top_title {
@@ -830,10 +909,19 @@ template {
   text-transform: none;
   margin: 0;
   color: #bebebe;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer-top_contacts {
+  display: flex;
+  justify-content: space-between;
+  width: 30.3125rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .footer-top_adress {
+  flex-basis: 20.1875rem;
   font-family: "Montserrat";
   font-size: 0.75em;
   font-weight: 400;
@@ -845,6 +933,167 @@ template {
 
 .footer-top_adress::before {
   content: url("../../img/footer-adress.png");
+  padding-right: 0.3rem;
   width: 0.5625rem;
   height: 0.8125rem;
+}
+
+.footer-top_telephone {
+  flex-basis: 8.4375rem;
+  font-family: "Montserrat";
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: 0.9em;
+  text-transform: none;
+  margin: 0;
+  color: #bebebe;
+}
+
+.footer-top_telephone::before {
+  content: url("../../img/footer-tel.png");
+  padding-right: 0.5rem;
+  width: 0.5625rem;
+  height: 0.8125rem;
+}
+
+.footer-top_social-container {
+  display: flex;
+  justify-content: space-between;
+  width: 12.5625rem;
+  margin: 0 auto;
+}
+
+.footer-top_social_btn_wireless {
+  background-color: #f3b25b;
+}
+
+.footer-top_social_btn_wireless::before {
+  content: url("../../img/social-btn1.png");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.95rem;
+  height: 1rem;
+  color: #ffffff;
+}
+
+.footer-top_social_btn_facebook {
+  background-color: #5883c0;
+}
+
+.footer-top_social_btn_facebook::before {
+  content: url("../../img/social-btn2.png");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.375rem;
+  height: 1rem;
+  color: #ffffff;
+}
+
+.footer-top_social_btn_tumblr {
+  background-color: #63bee0;
+}
+
+.footer-top_social_btn_tumblr::before {
+  content: url("../../img/social-btn3.png");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.5625rem;
+  height: 1rem;
+  color: #ffffff;
+}
+
+.footer-top_social_btn_round {
+  background-color: #e9a0c4;
+}
+
+.footer-top_social_btn_round::before {
+  content: url("../../img/social-btn4.png");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.75rem;
+  height: 1rem;
+  color: #ffffff;
+}
+
+.footer-top_social_btn_pinterest {
+  background-color: #d35051;
+}
+
+.footer-top_social_btn_pinterest::before {
+  content: url("../../img/social-btn5.png");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0.625rem;
+  height: 1rem;
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../../fonts/montserrat-v12-latin-regular.woff2") format("woff2"), url("../../fonts/montserrat-v12-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../../fonts/montserrat-v12-latin-700.woff2") format("woff2"), url("../../fonts/montserrat-v12-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Allan';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/allan-v9-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Allan Regular"), local("Allan-Regular"), url("../fonts/allan-v9-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/allan-v9-latin-regular.woff2") format("woff2"), url("../fonts/allan-v9-latin-regular.woff") format("woff"), url("../fonts/allan-v9-latin-regular.ttf") format("truetype"), url("../fonts/allan-v9-latin-regular.svg#Allan") format("svg");
+  /* Legacy iOS */
+}
+
+.footer-top_social_btn_wireless,
+.footer-top_social_btn_facebook,
+.footer-top_social_btn_tumblr,
+.footer-top_social_btn_round,
+.footer-top_social_btn_pinterest {
+  flex-basis: 2.1875rem;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 1rem;
+}
+
+.footer-bottom {
+  width: 100%;
+  background-color: #2c2c2c;
+}
+
+.footer-bottom_title {
+  padding: 2rem 0;
+  font-family: "Montserrat";
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: 0.9em;
+  text-transform: none;
+  margin: 0;
+  color: #bebebe;
+  display: inline-block;
+  margin: 0 auto;
 }
