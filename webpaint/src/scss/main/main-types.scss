@@ -16,18 +16,23 @@
     }
 }
 .types-list_item{
-    -ms-flex-preferred-size: 14.8125rem;
-            flex-basis: 14.8125rem;
+    -ms-flex-preferred-size: 15rem;
+            flex-basis: 15rem;
     &_photo{
         display: block;
         margin: 0 auto;
         margin-bottom: 1.875rem;
     }
     &_title{
-        @include font_style($mont, 1.1em, 400, 1.2em, none, main-types-text);
+        @include font_style($mont, 1.1em, 700, 1.2em, none, main-types-text);
         margin-bottom: 0.5rem;
     }
     &_subtitle{
         @include font_style($mont, 0.8em, 400, 1.8em, none, main-types-text);
+    }
+}
+.types-list_item:last-child{
+    .types-list_item_photo{
+        margin-bottom: 1.35rem;
     }
 }

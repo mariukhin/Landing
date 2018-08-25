@@ -5,7 +5,7 @@
     padding-top: 3.375rem;
     &_text{
         text-align: center;
-        width: 64rem;
+        width: 56rem;
         margin: 0 auto;
     }
     &_title{
@@ -16,14 +16,14 @@
         }
     }
     &_subtitle{
-        @include font_style($mont, 1.75rem, 400, 2rem, none, text-style);
+        @include font_style($mont, 1.75rem, 400, 2.5rem, none, text-style);
         margin-bottom: 3.25rem;
         &_cursive{
             @include font_style($mont, 1.75rem, 400, 2rem, none, text-style);
         }
     }
     &_btn-see{
-        @include font_style($mont, 0.75rem, 400, 1rem, uppercase, text-style);
+        @include font_style($mont, 0.85rem, 700, 1rem, uppercase, text-style);
         @include buttons(1rem,'bottom', 2rem , 12.5625rem, 
         3.125rem, map-get($map: $colors, $key: btncolor));
         border: 0;

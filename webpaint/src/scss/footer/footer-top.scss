@@ -14,7 +14,7 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
     &_title{
-        @include font_style($mont, 1.5em, 400, 1.5em, none, footertext);
+        @include font_style($mont, 1.5em, 700, 1.5em, none, footertext);
         margin-bottom: 0.5rem;
     }
     &_subtitle{

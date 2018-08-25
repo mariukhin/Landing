@@ -49,7 +49,7 @@
             flex-basis: 3rem;
         &_link{
             text-decoration: none;
-            @include font_style($mont, 0.875rem, 400, 0.875rem, uppercase, text-style);
+            @include font_style($mont, 0.775rem, 700, 0.85rem, uppercase, text-style);
 
             -webkit-transition: color 200ms linear;
             -o-transition: color 200ms linear;
