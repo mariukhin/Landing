@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v12-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+         url('../fonts/montserrat-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/montserrat-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/montserrat-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/montserrat-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/montserrat-v12-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+  }
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/montserrat-v12-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+         url('../fonts/montserrat-v12-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/montserrat-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/montserrat-v12-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/montserrat-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/montserrat-v12-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
+  }
+@font-face {
+    font-family: 'Allan';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/allan-v9-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Allan Regular'), local('Allan-Regular'),
+         url('../fonts/allan-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/allan-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/allan-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/allan-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/allan-v9-latin-regular.svg#Allan') format('svg'); /* Legacy iOS */
+}
+$mont: 'Montserrat';
+$allan: 'Allan';
+
+$colors:(
+    logo-text-color: #363636,
+    header-menu-color: #555555,
+    menuitemhover: #e5493a
+);
+@mixin buttons($pad: 0, $mar: 'bottom', $marnum: 0, $butwidth: '', 
+$butheight: 0, $backcolor: transparent){
+
+    padding: $pad;
+    width: $butwidth;
+    height: $butheight;
+    cursor: pointer;
+    background-color: $backcolor;
+
+    @if $mar == 'bottom'{
+        margin-bottom: $marnum;
+    }@else if $mar == 'left'{
+        margin-left: $marnum;
+    }@else if $mar == 'right'{
+        margin-right: $marnum;
+    }@else if $mar == 'top'{
+        margin-top: $marnum;
+    }@else if $mar == 'null'{
+        margin: 0;
+        $marnum: 0;
+    }        
+}
+@mixin flex($value: 'all'){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    @if $value == 'all'{
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
+    }@else if $value == 'hor'{
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    }@else if $value == 'ver'{
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
+    }@else if $value == 'align'{
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    }           
+}
+
+@mixin font_style($family: '', $fsize: '', $fweight: 400, $lheight: '',$ftrans: uppercase, $fcolor: ''){
+    font-family: $family;
+    font-size: $fsize ;
+    font-weight: $fweight;
+    line-height: $lheight;
+    text-transform: $ftrans;
+    margin: 0;
+    color: map-get($map: $colors, $key: $fcolor);
+}
+%social-button{
+    -ms-flex-preferred-size: 2.1875rem;
+            flex-basis: 2.1875rem;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 1rem;
+}
+
+@mixin social-btn($bgcolor: '', $pseudo: '', $width: ''){
+    background-color: map-get($map: $colors, $key: $bgcolor);
+    &::before{
+        content: $pseudo;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: $width;
+        height: 1rem;
+        color: map-get($map: $colors, $key: btnwhite);
+    }
+
+}

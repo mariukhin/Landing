@@ -2,3 +2,7 @@
    Import partials below
 */
 @import 'normalize';
+@import 'variables';
+
+@import 'header/header-top';
+@import 'header/header-bottom.scss';
